@@ -2,242 +2,203 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Дарья & Сергей</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+<title>Свадебное приглашение</title>
 
 <style>
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  background: #f2f2f2;
-  color: #2c2c2c;
+    margin: 0;
+    font-family: 'Georgia', serif;
+    color: #333;
+    background: #f5f5f5;
+    overflow-x: hidden;
 }
 
-/* ОБЩИЕ СЕКЦИИ */
 section {
-  padding: 80px 20px;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* HERO */
 .hero {
-  height: 100vh;
-  background: url('https://sun9-61.userapi.com/s/v1/ig2/azdPZflEpbfYW10OxuwW6o15FpPhf5Z4fn_jJwlOi9VqUp-kKMh9lkw8i6pyiaw2zIfQMHDaRA5ky1T2OVQ86NWf.jpg') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+    background: url('https://vk.com/away.php?to=https%3A%2F%2Fsun9-39.userapi.com%2Fs%2Fv1%2Fig2%2F7Z1uaBwNBCQ7WtjMt9vriTJbjQFEOIP-SDWu7s7qftnWk1NhlfTPS-FszPgoGgMYSIsvSKHeUbP2CEVkujuEtXB6.jpg%3Fquality%3D95%26as%3D32x48%2C48x72%2C72x108%2C108x162%2C160x240%2C240x360%2C360x540%2C480x720%2C540x810%2C640x960%2C720x1080%2C1080x1620%2C1280x1920%2C1440x2160%2C1600x2400%26from%3Dbu%26u%3Dh3LnsgLuCPFP2nIkT4zHF8EPsv19ikBM39-inDOoa4Y%26cs%3D640x0&utf=1') center/cover no-repeat;
+    color: white;
+    height: 100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    backdrop-filter: brightness(0.7);
 }
 
-.hero-box {
-  background: rgba(0,0,0,0.4);
-  padding: 30px;
-  border-radius: 20px;
+.hero h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+    animation: fadeInDown 2s ease;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 50px;
+.hero p {
+    max-width: 600px;
+    margin: 20px auto;
+    animation: fadeIn 3s ease;
 }
 
-/* СЕРЫЙ ФОН */
 .gray {
-  background: #f2f2f2;
+    background: #eaeaea;
 }
 
-/* КАЛЕНДАРЬ */
-.calendar {
-  margin-top: 20px;
+.date img {
+    width: 200px;
+    margin-top: 20px;
 }
 
-.day {
-  display: inline-block;
-  border: 2px solid #2c2c2c;
-  border-radius: 50%;
-  padding: 10px 15px;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* ТАЙМЕР */
 .timer {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+    font-size: 28px;
+    margin-top: 20px;
 }
 
-/* ТАЙМИНГ */
 .timeline {
-  max-width: 500px;
-  margin: auto;
-  text-align: left;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-/* КАРТА */
-iframe {
-  width: 100%;
-  max-width: 600px;
-  height: 300px;
-  border-radius: 15px;
-  border: none;
-  margin-top: 20px;
+.timeline div {
+    font-size: 16px;
 }
 
-/* ДРЕСС-КОД */
-.dress {
-  background: url('https://sun9-70.userapi.com/s/v1/ig2/scrxbajPvoexCaFWXSx0KHECQM8XEAwx_kiOXZ9cYKBhVZVJKNMH64mO566B5p7-T_zYOhuKgugOdaXt_zGxSblc.jpg') center/cover;
-  color: white;
+.map iframe {
+    width: 90%;
+    height: 300px;
+    border: none;
+    margin-top: 20px;
 }
 
-.overlay {
-  background: rgba(0,0,0,0.5);
-  padding: 40px;
+.dresscode {
+    background: url('https://vk.com/away.php?to=https%3A%2F%2Fsun9-70.userapi.com%2Fs%2Fv1%2Fig2%2FscrxbajPvoexCaFWXSx0KHECQM8XEAwx_kiOXZ9cYKBhVZVJKNMH64mO566B5p7-T_zYOhuKgugOdaXt_zGxSblc.jpg%3Fquality%3D95%26as%3D32x48%2C48x72%2C72x108%2C108x162%2C160x240%2C240x360%2C360x540%2C480x720%2C540x810%2C640x960%2C720x1080%2C1080x1620%2C1280x1920%2C1440x2160%2C1600x2400%26from%3Dbu%26u%3DRVLVMs1F_qFgEE4R8OtfxN-QrhsGZAlULiR8qOGeBrQ%26cs%3D1600x0&utf=1') center/cover no-repeat;
+    color: white;
 }
 
 .colors {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .color {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 2px solid white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
 }
 
-.pink { background: #f8c8dc; }
-.blue { background: #c8e6f8; }
-.yellow { background: #fff3b0; }
-.green { background: #d4f5d0; }
-.olive { background: #808000; }
-
-/* КНОПКА */
-.btn {
-  display: inline-block;
-  padding: 15px 30px;
-  border: 1px solid #2c2c2c;
-  text-decoration: none;
-  color: #2c2c2c;
-  margin-top: 20px;
+.rsvp button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
 }
 
-.btn:hover {
-  background: #2c2c2c;
-  color: white;
+.rsvp button:hover {
+    background: #555;
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+@keyframes fadeInDown {
+    from {opacity:0; transform: translateY(-30px);}
+    to {opacity:1; transform: translateY(0);}
 }
 </style>
 </head>
 
 <body>
 
-<!-- 1 ОБЛОЖКА -->
 <section class="hero">
-  <div class="hero-box">
     <h1>Дарья & Сергей</h1>
     <p>
-      Дорогие наши родные и друзья!
+        Дорогие наши родные и друзья!
 
-      Позвольте пригласить вас разделить с нами столь важный день — торжество посвященное нашему бракосочетанию
+        Позвольте пригласить вас разделить с нами столь важный день — торжество нашего бракосочетания.
 
-      Наша свадьба состоится:
+        Наша свадьба состоится:
     </p>
-  </div>
 </section>
 
-<!-- 2 ДАТА + ТАЙМЕР -->
-<section class="gray">
-  <h2>20 августа 2026</h2>
-
-  <div class="calendar">
-    <div class="day">20</div>
-  </div>
-
-  <div class="timer">
-    <div><b id="d">0</b>
-дней</div>
-    <div><b id="h">0</b>
-часов</div>
-    <div><b id="m">0</b>
-минут</div>
-    <div><b id="s">0</b>
-секунд</div>
-  </div>
+<section class="gray date">
+    <h2>20 августа 2026</h2>
+    <img src="https://vk.com/away.php?to=https%3A%2F%2Fsun9-27.userapi.com%2Fs%2Fv1%2Fig2%2Fx3wiCfa3eyTkbCHtko5cipJea4tKG12huEyA6BVKuEB4X7tG2WRUyoEArByVRMsPYWDNnsgaMdqHeyCy1IyyH8ph.jpg%3Fquality%3D95%26as%3D32x26%2C48x38%2C72x58%2C108x86%2C160x128%2C240x192%2C360x288%2C480x384%2C540x432%2C640x512%2C720x576%2C1080x864%2C1280x1024%2C1402x1122%26from%3Dbu%26u%3DaA7wTVtt5T4WcZkIL6UBi-drtCaOUXZvVn8XWv54PqU%26cs%3D1402x0&utf=1">
+    <div class="timer" id="timer"></div>
 </section>
 
-<!-- 3 ТАЙМИНГ -->
-<section class="gray">
-  <h2>Программа дня</h2>
-
-  <div class="timeline">
-    <p>12:00 — церемония бракосочетания</p>
-    <p>13:00 — прогулка + фотосессия</p>
-    <p>17:00 — свадебный ужин</p>
-    <p>23:00 — завершение вечера</p>
-  </div>
-</section>
-
-<!-- 4 МЕСТО -->
-<section class="gray">
-  <h2>Место проведения</h2>
-  <p><b>Управление ЗАГС</b></p>
-
-  <iframe src="https://maps.google.com/maps?q=Белгород%20Попова%2014&output=embed"></iframe>
-</section>
-
-<!-- 5 ДРЕСС-КОД -->
-<section class="dress">
-  <div class="overlay">
-    <h2>Дресс-код</h2>
-
-    <p>
-      Нам было бы очень приятно, если бы вы выбрали наряды в этой цветовой гамме
-    </p>
-
-    <div class="colors">
-      <div class="color pink"></div>
-      <div class="color blue"></div>
-      <div class="color yellow"></div>
-      <div class="color green"></div>
-      <div class="color olive"></div>
+<section>
+    <h2>Тайминг дня</h2>
+    <div class="timeline">
+        <div>12:00
+Церемония</div>
+        <div>13:00
+Прогулка</div>
+        <div>17:00
+Ужин</div>
+        <div>23:00
+Завершение</div>
     </div>
-  </div>
 </section>
 
-<!-- 6 RSVP -->
-<section class="gray">
-  <h2>Подтвердите присутствие</h2>
+<section class="gray map">
+    <h2>Место проведения</h2>
+    <p>Управление ЗАГС</p>
+    <iframe src="https://maps.google.com/maps?q=Белгород%20Попова%2014&output=embed"></iframe>
+</section>
 
-  <a href="https://forms.gle/wBGfkj6pEau3Drqj9" target="_blank" class="btn">
-    Перейти к форме
-  </a>
+<section class="dresscode">
+    <h2>Дресс-код</h2>
+    <p>
+        Нам будет приятно, если вы поддержите цветовую гамму праздника
+    </p>
+    <div class="colors">
+        <div class="color" style="background:#f8c8dc"></div>
+        <div class="color" style="background:#cde7ff"></div>
+        <div class="color" style="background:#fff5ba"></div>
+        <div class="color" style="background:#d4f5d0"></div>
+        <div class="color" style="background:#808000"></div>
+    </div>
+</section>
 
-  <p style="margin-top:30px;">С нетерпением ждём вас! ❤️</p>
+<section class="gray rsvp">
+    <button onclick="window.location.href='https://forms.gle/wBGfkj6pEau3Drqj9'">
+        Подтвердить присутствие
+    </button>
+</section>
+
+<section>
+    <h2>С нетерпением ждём вас!</h2>
 </section>
 
 <script>
-// ТАЙМЕР
-const date = new Date("August 20, 2026 12:00:00").getTime();
+const weddingDate = new Date("Aug 20, 2026 00:00:00").getTime();
 
-setInterval(() => {
-  const now = new Date().getTime();
-  const diff = date - now;
+const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
 
-  document.getElementById("d").innerText = Math.floor(diff / (1000*60*60*24));
-  document.getElementById("h").innerText = Math.floor((diff / (1000*60*60)) % 24);
-  document.getElementById("m").innerText = Math.floor((diff / (1000*60)) % 60);
-  document.getElementById("s").innerText = Math.floor((diff / 1000) % 60);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 *0 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("timer").innerHTML =
+        days + " дней " + hours + " часов " + minutes + " минут";
+
 }, 1000);
 </script>
 
 </body>
-</html>/ТВОЯССЫЛ
+</html> 6
